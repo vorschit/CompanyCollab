@@ -38,11 +38,13 @@ namespace CompanyCollab
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblConnSuccessFail = new System.Windows.Forms.Label();
+            this.dataGridViewSyarikat = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSyarikat)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(225, 396);
+            this.button1.Location = new System.Drawing.Point(486, 75);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 39);
             this.button1.TabIndex = 0;
@@ -52,21 +54,21 @@ namespace CompanyCollab
             // 
             // txtAgensi
             // 
-            this.txtAgensi.Location = new System.Drawing.Point(184, 115);
+            this.txtAgensi.Location = new System.Drawing.Point(116, 10);
             this.txtAgensi.Name = "txtAgensi";
             this.txtAgensi.Size = new System.Drawing.Size(267, 20);
             this.txtAgensi.TabIndex = 1;
             // 
             // txtAktiviti
             // 
-            this.txtAktiviti.Location = new System.Drawing.Point(184, 180);
+            this.txtAktiviti.Location = new System.Drawing.Point(116, 75);
             this.txtAktiviti.Name = "txtAktiviti";
             this.txtAktiviti.Size = new System.Drawing.Size(267, 20);
             this.txtAktiviti.TabIndex = 2;
             // 
             // txtSkop
             // 
-            this.txtSkop.Location = new System.Drawing.Point(184, 239);
+            this.txtSkop.Location = new System.Drawing.Point(116, 134);
             this.txtSkop.Multiline = true;
             this.txtSkop.Name = "txtSkop";
             this.txtSkop.Size = new System.Drawing.Size(267, 86);
@@ -75,7 +77,7 @@ namespace CompanyCollab
             // lblConnStatus
             // 
             this.lblConnStatus.AutoSize = true;
-            this.lblConnStatus.Location = new System.Drawing.Point(222, 481);
+            this.lblConnStatus.Location = new System.Drawing.Point(483, 160);
             this.lblConnStatus.Name = "lblConnStatus";
             this.lblConnStatus.Size = new System.Drawing.Size(100, 13);
             this.lblConnStatus.TabIndex = 4;
@@ -85,7 +87,7 @@ namespace CompanyCollab
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 121);
+            this.label2.Location = new System.Drawing.Point(15, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 5;
@@ -95,7 +97,7 @@ namespace CompanyCollab
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 186);
+            this.label3.Location = new System.Drawing.Point(18, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 6;
@@ -105,7 +107,7 @@ namespace CompanyCollab
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(86, 245);
+            this.label4.Location = new System.Drawing.Point(18, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 7;
@@ -114,17 +116,27 @@ namespace CompanyCollab
             // lblConnSuccessFail
             // 
             this.lblConnSuccessFail.AutoSize = true;
-            this.lblConnSuccessFail.Location = new System.Drawing.Point(338, 481);
+            this.lblConnSuccessFail.Location = new System.Drawing.Point(599, 160);
             this.lblConnSuccessFail.Name = "lblConnSuccessFail";
             this.lblConnSuccessFail.Size = new System.Drawing.Size(35, 13);
             this.lblConnSuccessFail.TabIndex = 8;
             this.lblConnSuccessFail.Text = "label1";
             // 
+            // dataGridViewSyarikat
+            // 
+            this.dataGridViewSyarikat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSyarikat.Location = new System.Drawing.Point(18, 279);
+            this.dataGridViewSyarikat.Name = "dataGridViewSyarikat";
+            this.dataGridViewSyarikat.Size = new System.Drawing.Size(577, 416);
+            this.dataGridViewSyarikat.TabIndex = 9;
+            this.dataGridViewSyarikat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSyarikat_CellContentClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 552);
+            this.ClientSize = new System.Drawing.Size(998, 721);
+            this.Controls.Add(this.dataGridViewSyarikat);
             this.Controls.Add(this.lblConnSuccessFail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -137,6 +149,7 @@ namespace CompanyCollab
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSyarikat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +166,7 @@ namespace CompanyCollab
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblConnSuccessFail;
+        private System.Windows.Forms.DataGridView dataGridViewSyarikat;
     }
 }
 

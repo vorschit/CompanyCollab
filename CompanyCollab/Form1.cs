@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
+using Newtonsoft.Json;
 
 namespace CompanyCollab
 {
@@ -53,32 +54,73 @@ namespace CompanyCollab
             
             if (client != null)
             {
+                // change the label to green color + "connected"
                 lblConnSuccessFail.ForeColor = Color.Green; 
                 lblConnSuccessFail.Text = "Connected";
             }
 
             else
             {
+                // change the label to red color + "not connected"
                 lblConnSuccessFail.ForeColor = Color.Red;
                 lblConnSuccessFail.Text = "Database is not connected";
             }
-            
+
+            //locate directory from database
+            FirebaseResponse res = client.Get(@"Information");
+
+            //transform data in form of Json to Dictionary Item
+            Dictionary<string, TheInformation> data = JsonConvert.DeserializeObject<Dictionary<string, TheInformation>>(res.Body.ToString());
+
+            PopulateRTB(data);
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
             var datalayer = new Data
             {
+                // declaration var from textbox
                 Agensi = txtAgensi.Text,
                 Aktiviti = txtAktiviti.Text,
                 Skop = txtSkop.Text
             };
 
+            // create no-space for parent node
             string noSpace =txtAgensi.Text;
+
+            //trimming other than first word
             this.txtAgensi.Text = noSpace.Trim().Split(' ')[0];
+
+            //writing data into database
             SetResponse resp = await client.SetTaskAsync("Information/" + txtAgensi.Text, datalayer);
             Data result = resp.ResultAs<Data>();
+
+            //notification the data has been upload upon success
             MessageBox.Show("Data" + result.Agensi + " Inserted");
+        }
+
+
+        private void dataGridViewSyarikat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+        }
+        
+        void PopulateRTB (Dictionary<string, TheInformation> record)
+        {
+            //make sure the gridview are empty
+            dataGridViewSyarikat.Rows.Clear();
+            dataGridViewSyarikat.Columns.Clear();
+
+            dataGridViewSyarikat.Columns.Add("Key", "Key");
+            dataGridViewSyarikat.Columns.Add("Agensi", "Agensi");
+            dataGridViewSyarikat.Columns.Add("Aktiviti", "Aktiviti");
+            dataGridViewSyarikat.Columns.Add("Skop", "Skop");
+
+            foreach (var item in record)
+            {
+                dataGridViewSyarikat.Rows.Add(item.Key, item.Value.Agensi, item.Value.Aktiviti, item.Value.Skop);
+            }
         }
     }
 }

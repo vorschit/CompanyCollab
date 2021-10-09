@@ -116,6 +116,7 @@ namespace CompanyCollab
             dataGridViewSyarikat.Rows.Clear();
             dataGridViewSyarikat.Columns.Clear();
 
+            // create a column for the table
             dataGridViewSyarikat.Columns.Add("Key", "Key");
             dataGridViewSyarikat.Columns.Add("Agensi", "Agensi");
             dataGridViewSyarikat.Columns.Add("Aktiviti", "Aktiviti");

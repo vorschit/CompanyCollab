@@ -142,5 +142,15 @@ namespace CompanyCollab
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new UserControlHome());
         }
+
+        private void btnHome_MouseHover(object sender, EventArgs e)
+        {
+            btnHome.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btnNewEntry_MouseHover(object sender, EventArgs e)
+        {
+            btnNewEntry.BackColor = SystemColors.ButtonFace;
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace CompanyCollab
 
         };
 
-        IFirebaseClient client;
+        public IFirebaseClient client;
         public Form1()
         {
             InitializeComponent();
@@ -70,39 +70,8 @@ namespace CompanyCollab
                 lblConnSuccessFail.Text = "Database is not connected";
             }
 
-            //locate directory from database
-            FirebaseResponse res = client.Get(@"Information");
-
-            //transform data in form of Json to Dictionary Item
-            Dictionary<string, TheInformation> data = JsonConvert.DeserializeObject<Dictionary<string, TheInformation>>(res.Body.ToString());
-
-            PopulateRTB(data);
+         
         }
-
-        private async void button1_Click(object sender, EventArgs e)
-        {
-            var datalayer = new Data
-            {
-                // declaration var from textbox
-                Agensi = txtAgensi.Text,
-                Aktiviti = txtAktiviti.Text,
-                Skop = txtSkop.Text
-            };
-
-            // create no-space for parent node
-            string noSpace =txtAgensi.Text;
-
-            //trimming other than first word
-            this.txtAgensi.Text = noSpace.Trim().Split(' ')[0];
-
-            //writing data into database
-            SetResponse resp = await client.SetTaskAsync("Information/" + txtAgensi.Text, datalayer);
-            Data result = resp.ResultAs<Data>();
-
-            //notification the data has been upload upon success
-            MessageBox.Show("Data" + result.Agensi + " Inserted");
-        }
-
 
         private void dataGridViewSyarikat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -110,24 +79,6 @@ namespace CompanyCollab
 
         }
         
-        void PopulateRTB (Dictionary<string, TheInformation> record)
-        {
-            //make sure the gridview are empty
-            dataGridViewSyarikat.Rows.Clear();
-            dataGridViewSyarikat.Columns.Clear();
-
-            // create a column for the table
-            dataGridViewSyarikat.Columns.Add("Key", "Key");
-            dataGridViewSyarikat.Columns.Add("Agensi", "Agensi");
-            dataGridViewSyarikat.Columns.Add("Aktiviti", "Aktiviti");
-            dataGridViewSyarikat.Columns.Add("Skop", "Skop");
-
-            foreach (var item in record)
-            {
-                dataGridViewSyarikat.Rows.Add(item.Key, item.Value.Agensi, item.Value.Aktiviti, item.Value.Skop);
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
@@ -158,6 +109,38 @@ namespace CompanyCollab
         private void panel_header_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
+        }
+
+        private void btnNewEntry_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new UserControlNewEntry());
+        }
+
+        private void txtAgensi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAktiviti_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSkop_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new UserControlHome());
         }
     }
 }

@@ -29,135 +29,134 @@ namespace CompanyCollab
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtAgensi = new System.Windows.Forms.TextBox();
-            this.txtAktiviti = new System.Windows.Forms.TextBox();
-            this.txtSkop = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblConnStatus = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblConnSuccessFail = new System.Windows.Forms.Label();
-            this.dataGridViewSyarikat = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNewEntry = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.panel_header = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSyarikat)).BeginInit();
-            this.panel_header.SuspendLayout();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelSideMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(494, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtAgensi
-            // 
-            this.txtAgensi.BackColor = System.Drawing.Color.Gray;
-            this.txtAgensi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAgensi.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtAgensi.Location = new System.Drawing.Point(124, 91);
-            this.txtAgensi.Name = "txtAgensi";
-            this.txtAgensi.Size = new System.Drawing.Size(267, 20);
-            this.txtAgensi.TabIndex = 1;
-            // 
-            // txtAktiviti
-            // 
-            this.txtAktiviti.BackColor = System.Drawing.Color.Gray;
-            this.txtAktiviti.ForeColor = System.Drawing.Color.White;
-            this.txtAktiviti.Location = new System.Drawing.Point(124, 156);
-            this.txtAktiviti.Name = "txtAktiviti";
-            this.txtAktiviti.Size = new System.Drawing.Size(267, 20);
-            this.txtAktiviti.TabIndex = 2;
-            // 
-            // txtSkop
-            // 
-            this.txtSkop.BackColor = System.Drawing.Color.Gray;
-            this.txtSkop.Location = new System.Drawing.Point(124, 215);
-            this.txtSkop.Multiline = true;
-            this.txtSkop.Name = "txtSkop";
-            this.txtSkop.Size = new System.Drawing.Size(267, 86);
-            this.txtSkop.TabIndex = 3;
             // 
             // lblConnStatus
             // 
             this.lblConnStatus.AutoSize = true;
             this.lblConnStatus.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblConnStatus.Location = new System.Drawing.Point(491, 241);
+            this.lblConnStatus.Location = new System.Drawing.Point(12, 613);
             this.lblConnStatus.Name = "lblConnStatus";
             this.lblConnStatus.Size = new System.Drawing.Size(100, 13);
             this.lblConnStatus.TabIndex = 4;
             this.lblConnStatus.Text = "Connection Status :";
             this.lblConnStatus.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(23, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Agensi / Syarikat";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(26, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Aktiviti Agensi";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(26, 221);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Skop Kerjasama";
-            // 
             // lblConnSuccessFail
             // 
             this.lblConnSuccessFail.AutoSize = true;
-            this.lblConnSuccessFail.Location = new System.Drawing.Point(607, 241);
+            this.lblConnSuccessFail.Location = new System.Drawing.Point(128, 613);
             this.lblConnSuccessFail.Name = "lblConnSuccessFail";
             this.lblConnSuccessFail.Size = new System.Drawing.Size(35, 13);
             this.lblConnSuccessFail.TabIndex = 8;
             this.lblConnSuccessFail.Text = "label1";
             // 
-            // dataGridViewSyarikat
-            // 
-            this.dataGridViewSyarikat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSyarikat.Location = new System.Drawing.Point(37, 330);
-            this.dataGridViewSyarikat.Name = "dataGridViewSyarikat";
-            this.dataGridViewSyarikat.Size = new System.Drawing.Size(885, 361);
-            this.dataGridViewSyarikat.TabIndex = 9;
-            this.dataGridViewSyarikat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSyarikat_CellContentClick);
-            // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(920, 3);
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(0, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(250, 40);
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Exit";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panelSideMenu
+            // 
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.panelSideMenu.Controls.Add(this.panel2);
+            this.panelSideMenu.Controls.Add(this.panel1);
+            this.panelSideMenu.Controls.Add(this.btnHome);
+            this.panelSideMenu.Controls.Add(this.lblConnSuccessFail);
+            this.panelSideMenu.Controls.Add(this.panelLogo);
+            this.panelSideMenu.Controls.Add(this.lblConnStatus);
+            this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideMenu.Location = new System.Drawing.Point(0, 33);
+            this.panelSideMenu.Name = "panelSideMenu";
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 688);
+            this.panelSideMenu.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 643);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 45);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.panel1.Controls.Add(this.btnNewEntry);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 200);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 100);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnNewEntry
+            // 
+            this.btnNewEntry.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNewEntry.FlatAppearance.BorderSize = 0;
+            this.btnNewEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewEntry.Location = new System.Drawing.Point(0, 0);
+            this.btnNewEntry.Name = "btnNewEntry";
+            this.btnNewEntry.Size = new System.Drawing.Size(250, 100);
+            this.btnNewEntry.TabIndex = 0;
+            this.btnNewEntry.Text = "New Entry";
+            this.btnNewEntry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewEntry.UseVisualStyleBackColor = true;
+            this.btnNewEntry.Click += new System.EventHandler(this.btnNewEntry_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnHome.Location = new System.Drawing.Point(0, 100);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(250, 100);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.White;
+            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
             // panel_header
             // 
-            this.panel_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_header.Controls.Add(this.btnClose);
+            this.panel_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_header.Location = new System.Drawing.Point(0, 0);
             this.panel_header.Name = "panel_header";
@@ -168,48 +167,47 @@ namespace CompanyCollab
             this.panel_header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseMove);
             this.panel_header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseUp);
             // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(250, 33);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(748, 688);
+            this.panelMain.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(998, 721);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.panel_header);
-            this.Controls.Add(this.dataGridViewSyarikat);
-            this.Controls.Add(this.lblConnSuccessFail);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblConnStatus);
-            this.Controls.Add(this.txtSkop);
-            this.Controls.Add(this.txtAktiviti);
-            this.Controls.Add(this.txtAgensi);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSyarikat)).EndInit();
-            this.panel_header.ResumeLayout(false);
+            this.panelSideMenu.ResumeLayout(false);
+            this.panelSideMenu.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtAgensi;
-        private System.Windows.Forms.TextBox txtAktiviti;
-        private System.Windows.Forms.TextBox txtSkop;
         private System.Windows.Forms.Label lblConnStatus;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblConnSuccessFail;
-        private System.Windows.Forms.DataGridView dataGridViewSyarikat;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panelSideMenu;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnNewEntry;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panel_header;
+        private System.Windows.Forms.Panel panelMain;
     }
 }
 

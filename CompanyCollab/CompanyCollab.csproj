@@ -89,6 +89,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheInformation.cs" />
+    <Compile Include="UserControlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome.Designer.cs">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlNewEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlNewEntry.Designer.cs">
+      <DependentUpon>UserControlNewEntry.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +113,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlHome.resx">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlNewEntry.resx">
+      <DependentUpon>UserControlNewEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

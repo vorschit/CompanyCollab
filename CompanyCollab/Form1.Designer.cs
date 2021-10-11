@@ -42,8 +42,8 @@ namespace CompanyCollab
             this.panel_header = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel_header.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblConnStatus
@@ -68,16 +68,17 @@ namespace CompanyCollab
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnClose.BackColor = System.Drawing.Color.Firebrick;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(0, 5);
+            this.btnClose.Location = new System.Drawing.Point(953, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(250, 40);
+            this.btnClose.Size = new System.Drawing.Size(45, 41);
             this.btnClose.TabIndex = 10;
-            this.btnClose.Text = "Exit";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.button2_Click);
@@ -92,16 +93,15 @@ namespace CompanyCollab
             this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Controls.Add(this.lblConnStatus);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSideMenu.Location = new System.Drawing.Point(0, 33);
+            this.panelSideMenu.Location = new System.Drawing.Point(0, 41);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 688);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 680);
             this.panelSideMenu.TabIndex = 12;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 643);
+            this.panel2.Location = new System.Drawing.Point(0, 635);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 45);
             this.panel2.TabIndex = 2;
@@ -119,30 +119,32 @@ namespace CompanyCollab
             // btnNewEntry
             // 
             this.btnNewEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnNewEntry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewEntry.BackgroundImage")));
+            this.btnNewEntry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnNewEntry.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNewEntry.FlatAppearance.BorderSize = 0;
-            this.btnNewEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewEntry.Location = new System.Drawing.Point(0, 0);
             this.btnNewEntry.Name = "btnNewEntry";
             this.btnNewEntry.Size = new System.Drawing.Size(250, 100);
             this.btnNewEntry.TabIndex = 0;
-            this.btnNewEntry.Text = "New Entry";
-            this.btnNewEntry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewEntry.UseVisualStyleBackColor = false;
             this.btnNewEntry.Click += new System.EventHandler(this.btnNewEntry_Click);
             this.btnNewEntry.MouseHover += new System.EventHandler(this.btnNewEntry_MouseHover);
             // 
             // btnHome
             // 
+            this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Black;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 100);
             this.btnHome.Name = "btnHome";
+            this.btnHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnHome.Size = new System.Drawing.Size(250, 100);
             this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -162,10 +164,11 @@ namespace CompanyCollab
             // panel_header
             // 
             this.panel_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panel_header.Controls.Add(this.btnClose);
             this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_header.Location = new System.Drawing.Point(0, 0);
             this.panel_header.Name = "panel_header";
-            this.panel_header.Size = new System.Drawing.Size(998, 33);
+            this.panel_header.Size = new System.Drawing.Size(998, 41);
             this.panel_header.TabIndex = 11;
             this.panel_header.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_header_Paint);
             this.panel_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
@@ -176,9 +179,9 @@ namespace CompanyCollab
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(250, 33);
+            this.panelMain.Location = new System.Drawing.Point(250, 41);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(748, 688);
+            this.panelMain.Size = new System.Drawing.Size(748, 680);
             this.panelMain.TabIndex = 13;
             // 
             // Form1
@@ -196,8 +199,8 @@ namespace CompanyCollab
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelSideMenu.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel_header.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

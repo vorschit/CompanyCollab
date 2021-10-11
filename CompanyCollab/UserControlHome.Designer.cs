@@ -30,11 +30,14 @@ namespace CompanyCollab
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlHome));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewSyarikat = new System.Windows.Forms.DataGridView();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSyarikat)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,25 +69,37 @@ namespace CompanyCollab
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(115, 610);
+            this.btnLoad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLoad.BackgroundImage")));
+            this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLoad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoad.Location = new System.Drawing.Point(0, 0);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.Size = new System.Drawing.Size(258, 67);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnLoad);
+            this.panel2.Location = new System.Drawing.Point(31, 525);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(258, 68);
+            this.panel2.TabIndex = 2;
             // 
             // UserControlHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UserControlHome";
             this.Size = new System.Drawing.Size(748, 688);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSyarikat)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -94,5 +109,6 @@ namespace CompanyCollab
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewSyarikat;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -16,6 +16,7 @@ namespace CompanyCollab
 {
     public partial class Form1 : Form
     {
+        
         // (declaration) drag header of application
         bool drag = false;
         Point start_point = new Point(0, 0);
@@ -30,6 +31,7 @@ namespace CompanyCollab
             BasePath = "https://uniklintern-default-rtdb.asia-southeast1.firebasedatabase.app/"
 
         };
+
 
         public IFirebaseClient client;
         public Form1()

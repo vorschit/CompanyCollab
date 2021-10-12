@@ -64,15 +64,19 @@ namespace CompanyCollab
             dataGridViewSyarikat.Rows.Clear();
             dataGridViewSyarikat.Columns.Clear();
 
+
             // create a column for the table
             dataGridViewSyarikat.Columns.Add("Key", "Key");
             dataGridViewSyarikat.Columns.Add("Agensi", "Agensi");
             dataGridViewSyarikat.Columns.Add("Aktiviti", "Aktiviti");
             dataGridViewSyarikat.Columns.Add("Skop", "Skop");
+            dataGridViewSyarikat.Columns.Add("Status", "Status");
+            dataGridViewSyarikat.Columns.Add("Tempoh", "Tempoh");
+            dataGridViewSyarikat.Columns.Add("Kejayaan", "Kejayaan");
 
             foreach (var item in record)
             {
-                dataGridViewSyarikat.Rows.Add(item.Key, item.Value.Agensi, item.Value.Aktiviti, item.Value.Skop);
+                dataGridViewSyarikat.Rows.Add(item.Key, item.Value.Agensi, item.Value.Aktiviti, item.Value.Skop, item.Value.Status, item.Value.Tempoh, item.Value.Kejayaan);
             }
         }
     }

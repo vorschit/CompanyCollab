@@ -54,7 +54,11 @@ namespace CompanyCollab
                 // declaration var from textbox
                 Agensi = txtAgensi.Text,
                 Aktiviti = txtAktiviti.Text,
-                Skop = txtSkop.Text
+                Skop = txtSkop.Text,
+                Tempoh = txtTempoh.Text,
+                Kejayaan = txtKejayaan.Text,
+                Status = txtStatus.Text
+
             };
 
             // create no-space for parent node
@@ -69,6 +73,46 @@ namespace CompanyCollab
 
             //notification the data has been upload upon success
             MessageBox.Show("Data" + result.Agensi + " Inserted");
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

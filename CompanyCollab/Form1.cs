@@ -37,6 +37,8 @@ namespace CompanyCollab
         public Form1()
         {
             InitializeComponent();
+
+            panel_header.BackColor = Color.FromArgb(255, Color.White);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -153,6 +155,22 @@ namespace CompanyCollab
         private void btnNewEntry_MouseHover(object sender, EventArgs e)
         {
             btnNewEntry.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void lblConnSuccessFail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeadline_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new UserControlDeadline());
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -34,6 +34,7 @@ namespace CompanyCollab
             this.lblConnSuccessFail = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnDeadline = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNewEntry = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace CompanyCollab
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel_header = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnDeadline = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_header.SuspendLayout();
@@ -79,7 +79,7 @@ namespace CompanyCollab
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1271, 0);
+            this.btnClose.Location = new System.Drawing.Point(1540, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(60, 30);
@@ -102,13 +102,27 @@ namespace CompanyCollab
             this.panelSideMenu.Location = new System.Drawing.Point(0, 30);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(333, 857);
+            this.panelSideMenu.Size = new System.Drawing.Size(333, 870);
             this.panelSideMenu.TabIndex = 12;
+            // 
+            // btnDeadline
+            // 
+            this.btnDeadline.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeadline.BackgroundImage")));
+            this.btnDeadline.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnDeadline.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeadline.FlatAppearance.BorderSize = 0;
+            this.btnDeadline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeadline.Location = new System.Drawing.Point(0, 369);
+            this.btnDeadline.Name = "btnDeadline";
+            this.btnDeadline.Size = new System.Drawing.Size(333, 123);
+            this.btnDeadline.TabIndex = 0;
+            this.btnDeadline.UseVisualStyleBackColor = true;
+            this.btnDeadline.Click += new System.EventHandler(this.btnDeadline_Click);
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 802);
+            this.panel2.Location = new System.Drawing.Point(0, 815);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(333, 55);
@@ -184,7 +198,7 @@ namespace CompanyCollab
             this.panel_header.Location = new System.Drawing.Point(0, 0);
             this.panel_header.Margin = new System.Windows.Forms.Padding(4);
             this.panel_header.Name = "panel_header";
-            this.panel_header.Size = new System.Drawing.Size(1331, 30);
+            this.panel_header.Size = new System.Drawing.Size(1600, 30);
             this.panel_header.TabIndex = 11;
             this.panel_header.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_header_Paint);
             this.panel_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
@@ -198,29 +212,15 @@ namespace CompanyCollab
             this.panelMain.Location = new System.Drawing.Point(333, 30);
             this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(998, 857);
+            this.panelMain.Size = new System.Drawing.Size(1267, 870);
             this.panelMain.TabIndex = 13;
-            // 
-            // btnDeadline
-            // 
-            this.btnDeadline.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeadline.BackgroundImage")));
-            this.btnDeadline.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeadline.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDeadline.FlatAppearance.BorderSize = 0;
-            this.btnDeadline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeadline.Location = new System.Drawing.Point(0, 369);
-            this.btnDeadline.Name = "btnDeadline";
-            this.btnDeadline.Size = new System.Drawing.Size(333, 123);
-            this.btnDeadline.TabIndex = 0;
-            this.btnDeadline.UseVisualStyleBackColor = true;
-            this.btnDeadline.Click += new System.EventHandler(this.btnDeadline_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1331, 887);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.panel_header);

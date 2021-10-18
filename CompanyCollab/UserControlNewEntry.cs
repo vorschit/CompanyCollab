@@ -47,6 +47,7 @@ namespace CompanyCollab
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            
             client = new FireSharp.FirebaseClient(config);
 
             //locate directory from database
@@ -128,6 +129,21 @@ namespace CompanyCollab
 
         private void textKejayaan_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void UserControlNewEntry_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Value = DateTime.Today;
+            DateTime iDate;
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            iDate = dateTimePicker1.Value;
+            MessageBox.Show("Selected date is " + iDate);
 
         }
     }

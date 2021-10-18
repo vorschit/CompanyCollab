@@ -44,7 +44,7 @@ namespace CompanyCollab
             // 
             this.panel1.Controls.Add(this.dataGridViewSyarikat);
             this.panel1.Location = new System.Drawing.Point(41, 34);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(889, 604);
             this.panel1.TabIndex = 0;
@@ -66,7 +66,7 @@ namespace CompanyCollab
             this.dataGridViewSyarikat.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSyarikat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSyarikat.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewSyarikat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewSyarikat.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewSyarikat.Name = "dataGridViewSyarikat";
             this.dataGridViewSyarikat.RowHeadersWidth = 51;
             this.dataGridViewSyarikat.Size = new System.Drawing.Size(889, 604);
@@ -79,7 +79,7 @@ namespace CompanyCollab
             this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLoad.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLoad.Location = new System.Drawing.Point(0, 0);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(344, 82);
             this.btnLoad.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace CompanyCollab
             // 
             this.panel2.Controls.Add(this.btnLoad);
             this.panel2.Location = new System.Drawing.Point(41, 646);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(344, 84);
             this.panel2.TabIndex = 2;
@@ -103,9 +103,9 @@ namespace CompanyCollab
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlHome";
-            this.Size = new System.Drawing.Size(997, 847);
+            this.Size = new System.Drawing.Size(1267, 870);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSyarikat)).EndInit();
             this.panel2.ResumeLayout(false);

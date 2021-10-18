@@ -23,16 +23,12 @@ namespace CompanyCollab
 
         }
 
-       
-
         public IFirebaseClient client;
         private void dataGridViewSyarikat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-
         }
         
-
         private void btnLoad_Click(object sender, EventArgs e)
         {
             // connection to the firebase

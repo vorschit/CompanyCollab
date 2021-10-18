@@ -39,6 +39,9 @@ namespace CompanyCollab
             InitializeComponent();
 
             panel_header.BackColor = Color.FromArgb(255, Color.White);
+
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new UserControlNewEntry());
         }
 
         private void label2_Click(object sender, EventArgs e)

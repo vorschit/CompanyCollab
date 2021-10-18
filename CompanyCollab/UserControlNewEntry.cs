@@ -19,6 +19,12 @@ namespace CompanyCollab
         public UserControlNewEntry()
         {
             InitializeComponent();
+
+            panel1.AutoScroll = false;
+            panel1.HorizontalScroll.Enabled = false;
+            panel1.HorizontalScroll.Visible = false;
+            panel1.HorizontalScroll.Maximum = 0;
+            panel1.AutoScroll = true;
         }
 
 
@@ -111,6 +117,16 @@ namespace CompanyCollab
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textKejayaan_TextChanged(object sender, EventArgs e)
         {
 
         }

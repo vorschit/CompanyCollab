@@ -22,7 +22,7 @@ namespace CompanyCollab
         Point start_point = new Point(0, 0);
 
         // connection to the firebase
-        IFirebaseConfig config = new FirebaseConfig
+        IFirebaseConfig config = new FirebaseConfig ()
         {
             // database secret
             AuthSecret = "3kVy3mTEDYg9FWvEjOMwoP0rD3ttCtJDOLW2rtAK",
@@ -61,8 +61,19 @@ namespace CompanyCollab
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            client = new FireSharp.FirebaseClient(config);
-            
+            //client = new FireSharp.FirebaseClient(config);
+            try
+            {
+                client = new FireSharp.FirebaseClient(config);
+                lblConnSuccessFail.ForeColor = Color.Green;
+                lblConnSuccessFail.Text = "Connected";
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("Check Internet Connection");            }
+
+            /*
             if (client != null)
             {
                 // change the label to green color + "connected"
@@ -76,7 +87,7 @@ namespace CompanyCollab
                 lblConnSuccessFail.ForeColor = Color.Red;
                 lblConnSuccessFail.Text = "Database is not connected";
             }
-
+            */
          
         }
 

@@ -70,10 +70,19 @@ namespace CompanyCollab
             //dataGridViewSyarikat.Columns.Add("Tempoh", "Tempoh");
             dataGridViewSyarikat.Columns.Add("Kejayaan", "Kejayaan");
 
-            foreach (var item in record)
+            if (record != null)
             {
-                dataGridViewSyarikat.Rows.Add(item.Key, item.Value.Agensi, item.Value.Aktiviti, item.Value.Skop, item.Value.Status, item.Value.Tempoh, item.Value.Kejayaan);
+                foreach (var item in record)
+                {
+                    dataGridViewSyarikat.Rows.Add(item.Key, item.Value.Agensi, item.Value.Aktiviti, item.Value.Skop, item.Value.Status, item.Value.Tempoh, item.Value.Kejayaan);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Check Internet Connection");
+                
             }
         }
+
     }
 }

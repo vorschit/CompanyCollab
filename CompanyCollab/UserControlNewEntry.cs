@@ -57,7 +57,7 @@ namespace CompanyCollab
             Dictionary<string, TheInformation> data = JsonConvert.DeserializeObject<Dictionary<string, TheInformation>>(res.Body.ToString());
 
             DateTime iDate;
-            iDate = dateTimePicker1.Value;
+            iDate = dateTimePicker1.Value.Date;
 
             var datalayer = new Data
             {
@@ -74,12 +74,14 @@ namespace CompanyCollab
 
             // create no-space for parent node
             string noSpace = txtAgensi.Text;
+            string nospaceActivity = txtAktiviti.Text;
 
             //trimming other than first word
             this.txtAgensi.Text = noSpace.Trim().Split(' ')[0];
+            this.txtAktiviti.Text = nospaceActivity.Trim().Split(' ')[0];
 
             //writing data into database
-            SetResponse resp = await client.SetTaskAsync("Information/" + txtAgensi.Text, datalayer);
+            SetResponse resp = await client.SetTaskAsync("Information/" + txtAgensi.Text + txtAktiviti.Text , datalayer);
             Data result = resp.ResultAs<Data>();
 
             //notification the data has been upload upon success
@@ -146,7 +148,7 @@ namespace CompanyCollab
             //DateTimePicker1.Value = DateTime.Today;
             DateTime iDate;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            iDate = dateTimePicker1.Value;
+            iDate = dateTimePicker1.Value.Date;
             MessageBox.Show("Selected date is " + iDate);
 
         }

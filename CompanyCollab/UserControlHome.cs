@@ -20,17 +20,6 @@ namespace CompanyCollab
         {
             InitializeComponent();
 
-
-        }
-
-        public IFirebaseClient client;
-        private void dataGridViewSyarikat_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-        
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
             // connection to the firebase
             IFirebaseConfig config = new FirebaseConfig
             {
@@ -51,6 +40,17 @@ namespace CompanyCollab
             Dictionary<string, TheInformation> data = JsonConvert.DeserializeObject<Dictionary<string, TheInformation>>(res.Body.ToString());
 
             PopulateRTB(data);
+        }
+
+        public IFirebaseClient client;
+        private void dataGridViewSyarikat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+        
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+        
 
         }
 
@@ -62,12 +62,12 @@ namespace CompanyCollab
 
 
             // create a column for the table
-            dataGridViewSyarikat.Columns.Add("Key", "Key");
+            //dataGridViewSyarikat.Columns.Add("Key", "Key");
             dataGridViewSyarikat.Columns.Add("Agensi", "Agensi");
             dataGridViewSyarikat.Columns.Add("Aktiviti", "Aktiviti");
-            dataGridViewSyarikat.Columns.Add("Skop", "Skop");
-            dataGridViewSyarikat.Columns.Add("Status", "Status");
-            dataGridViewSyarikat.Columns.Add("Tempoh", "Tempoh");
+            //dataGridViewSyarikat.Columns.Add("Skop", "Skop");
+            //dataGridViewSyarikat.Columns.Add("Status", "Status");
+            //dataGridViewSyarikat.Columns.Add("Tempoh", "Tempoh");
             dataGridViewSyarikat.Columns.Add("Kejayaan", "Kejayaan");
 
             foreach (var item in record)

@@ -56,6 +56,9 @@ namespace CompanyCollab
             //transform data in form of Json to Dictionary Item
             Dictionary<string, TheInformation> data = JsonConvert.DeserializeObject<Dictionary<string, TheInformation>>(res.Body.ToString());
 
+            DateTime iDate;
+            iDate = dateTimePicker1.Value;
+
             var datalayer = new Data
             {
                 // declaration var from textbox
@@ -64,7 +67,8 @@ namespace CompanyCollab
                 Skop = txtSkop.Text,
                 Tempoh = txtTempoh.Text,
                 Kejayaan = txtKejayaan.Text,
-                Status = txtStatus.Text
+                Status = txtStatus.Text,
+                iDate = Convert.ToString(iDate)
 
             };
 
@@ -139,7 +143,7 @@ namespace CompanyCollab
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
+            //DateTimePicker1.Value = DateTime.Today;
             DateTime iDate;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             iDate = dateTimePicker1.Value;

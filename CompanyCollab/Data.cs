@@ -9,6 +9,6 @@
         public string Kejayaan { get; set; }
         public string Status { get; set; }
         
-        public string Date { get; set; }
+        public string iDate { get; set; }
     }
 }

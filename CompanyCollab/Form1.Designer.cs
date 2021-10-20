@@ -113,6 +113,7 @@ namespace CompanyCollab
             this.btnDeadline.FlatAppearance.BorderSize = 0;
             this.btnDeadline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeadline.Location = new System.Drawing.Point(0, 369);
+            this.btnDeadline.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeadline.Name = "btnDeadline";
             this.btnDeadline.Size = new System.Drawing.Size(333, 123);
             this.btnDeadline.TabIndex = 0;

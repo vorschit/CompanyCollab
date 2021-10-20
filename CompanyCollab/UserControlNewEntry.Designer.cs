@@ -30,7 +30,9 @@ namespace CompanyCollab
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@ namespace CompanyCollab
             this.label6 = new System.Windows.Forms.Label();
             this.txtTempoh = new System.Windows.Forms.TextBox();
             this.txtKejayaan = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +56,28 @@ namespace CompanyCollab
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(16, 17);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(1178, 834);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(334, 668);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(476, 77);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -84,7 +100,7 @@ namespace CompanyCollab
             this.tableLayoutPanel1.Controls.Add(this.txtTempoh, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtKejayaan, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 28);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.65414F));
@@ -97,6 +113,16 @@ namespace CompanyCollab
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1117, 587);
             this.tableLayoutPanel1.TabIndex = 15;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker1.Location = new System.Drawing.Point(195, 468);
+            this.dateTimePicker1.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(919, 22);
+            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label7
             // 
@@ -144,7 +170,7 @@ namespace CompanyCollab
             this.txtStatus.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.Location = new System.Drawing.Point(196, 368);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(917, 93);
@@ -157,7 +183,7 @@ namespace CompanyCollab
             this.txtSkop.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSkop.ForeColor = System.Drawing.Color.Black;
             this.txtSkop.Location = new System.Drawing.Point(196, 159);
-            this.txtSkop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSkop.Margin = new System.Windows.Forms.Padding(4);
             this.txtSkop.Multiline = true;
             this.txtSkop.Name = "txtSkop";
             this.txtSkop.Size = new System.Drawing.Size(917, 68);
@@ -183,7 +209,7 @@ namespace CompanyCollab
             this.txtAktiviti.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAktiviti.ForeColor = System.Drawing.Color.Black;
             this.txtAktiviti.Location = new System.Drawing.Point(196, 100);
-            this.txtAktiviti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAktiviti.Margin = new System.Windows.Forms.Padding(4);
             this.txtAktiviti.Multiline = true;
             this.txtAktiviti.Name = "txtAktiviti";
             this.txtAktiviti.Size = new System.Drawing.Size(917, 51);
@@ -197,7 +223,7 @@ namespace CompanyCollab
             this.txtAgensi.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgensi.ForeColor = System.Drawing.Color.Black;
             this.txtAgensi.Location = new System.Drawing.Point(196, 4);
-            this.txtAgensi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAgensi.Margin = new System.Windows.Forms.Padding(4);
             this.txtAgensi.Multiline = true;
             this.txtAgensi.Name = "txtAgensi";
             this.txtAgensi.Size = new System.Drawing.Size(917, 88);
@@ -249,7 +275,7 @@ namespace CompanyCollab
             this.txtTempoh.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTempoh.ForeColor = System.Drawing.Color.Black;
             this.txtTempoh.Location = new System.Drawing.Point(196, 235);
-            this.txtTempoh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTempoh.Margin = new System.Windows.Forms.Padding(4);
             this.txtTempoh.Name = "txtTempoh";
             this.txtTempoh.Size = new System.Drawing.Size(917, 39);
             this.txtTempoh.TabIndex = 18;
@@ -266,32 +292,6 @@ namespace CompanyCollab
             this.txtKejayaan.TabIndex = 23;
             this.txtKejayaan.TextChanged += new System.EventHandler(this.textKejayaan_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(134)))), ((int)(((byte)(252)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(334, 668);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(476, 77);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Location = new System.Drawing.Point(195, 468);
-            this.dateTimePicker1.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(919, 22);
-            this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
             // UserControlNewEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,7 +299,7 @@ namespace CompanyCollab
             this.AutoScrollMargin = new System.Drawing.Size(0, 400);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlNewEntry";
             this.Size = new System.Drawing.Size(1223, 870);
             this.Load += new System.EventHandler(this.UserControlNewEntry_Load);

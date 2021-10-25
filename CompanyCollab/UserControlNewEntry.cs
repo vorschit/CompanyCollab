@@ -55,9 +55,7 @@ namespace CompanyCollab
 
             //transform data in form of Json to Dictionary Item
             Dictionary<string, TheInformation> data = JsonConvert.DeserializeObject<Dictionary<string, TheInformation>>(res.Body.ToString());
-
-            DateTime iDate;
-            iDate = dateTimePicker1.Value.Date;
+            String selectedDate = monthCalendar1.SelectionRange.Start.ToShortDateString();
 
             var datalayer = new Data
             {
@@ -68,7 +66,7 @@ namespace CompanyCollab
                 Tempoh = txtTempoh.Text,
                 Kejayaan = txtKejayaan.Text,
                 Status = txtStatus.Text,
-                iDate = Convert.ToString(iDate)
+                iDate = selectedDate
 
             };
 
@@ -145,12 +143,25 @@ namespace CompanyCollab
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            //DateTimePicker1.Value = DateTime.Today;
+            /*
+            DateTimePicker1.Value = DateTime.Today;
             DateTime iDate;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             iDate = dateTimePicker1.Value.Date;
             MessageBox.Show("Selected date is " + iDate);
+            */
 
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            String selectedDate = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            MessageBox.Show("Selected date is" + selectedDate);
         }
     }
 }

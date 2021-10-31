@@ -15,6 +15,8 @@ namespace CompanyCollab
         public string Tempoh { get; set; }
         public string Kejayaan { get; set; }
         public string Status { get; set; }
+        
+        public string iDate { get; set; }
 
     }
 }

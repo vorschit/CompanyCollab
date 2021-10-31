@@ -74,7 +74,14 @@ namespace CompanyCollab
             {
                 foreach (var item in record)
                 {
-                    dataGridViewSyarikat.Rows.Add(item.Key, item.Value.Agensi, item.Value.Aktiviti, item.Value.Skop, item.Value.Status, item.Value.Tempoh, item.Value.Kejayaan);
+                    dataGridViewSyarikat.Rows.Add(
+                        item.Key,
+                        item.Value.Agensi,
+                        item.Value.Aktiviti,
+                        item.Value.Skop,
+                        item.Value.Status,
+                        item.Value.Tempoh,
+                        item.Value.Kejayaan);
                 }
             }
             else

@@ -130,8 +130,11 @@ namespace CompanyCollab
 
                 var row = dataGridView1.Rows[e.RowIndex];
 
-                if (now > month && now < expirationDate)
+                // if (now > month && now < expirationDate)
+                if (now < expirationDate)
                     row.DefaultCellStyle.BackColor = Color.Blue;
+                else if (now < month)
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
                 else if (now > expirationDate)
                     row.DefaultCellStyle.BackColor = Color.Red;
             }

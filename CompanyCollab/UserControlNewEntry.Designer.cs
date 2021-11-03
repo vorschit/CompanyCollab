@@ -157,7 +157,7 @@ namespace CompanyCollab
             // 
             this.txtStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.txtStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtStatus.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Font = new System.Drawing.Font("Cambria", 13.2F);
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.Location = new System.Drawing.Point(196, 368);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
@@ -170,7 +170,7 @@ namespace CompanyCollab
             // 
             this.txtSkop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.txtSkop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSkop.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSkop.Font = new System.Drawing.Font("Cambria", 13.2F);
             this.txtSkop.ForeColor = System.Drawing.Color.Black;
             this.txtSkop.Location = new System.Drawing.Point(196, 180);
             this.txtSkop.Margin = new System.Windows.Forms.Padding(4);
@@ -196,7 +196,7 @@ namespace CompanyCollab
             // 
             this.txtAktiviti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.txtAktiviti.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAktiviti.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAktiviti.Font = new System.Drawing.Font("Cambria", 13.2F);
             this.txtAktiviti.ForeColor = System.Drawing.Color.Black;
             this.txtAktiviti.Location = new System.Drawing.Point(196, 84);
             this.txtAktiviti.Margin = new System.Windows.Forms.Padding(4);
@@ -210,7 +210,7 @@ namespace CompanyCollab
             this.txtAgensi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.txtAgensi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAgensi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAgensi.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgensi.Font = new System.Drawing.Font("Cambria", 13.2F);
             this.txtAgensi.ForeColor = System.Drawing.Color.Black;
             this.txtAgensi.Location = new System.Drawing.Point(196, 4);
             this.txtAgensi.Margin = new System.Windows.Forms.Padding(4);
@@ -262,18 +262,18 @@ namespace CompanyCollab
             // 
             this.txtTempoh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.txtTempoh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTempoh.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTempoh.Font = new System.Drawing.Font("Cambria", 13.2F);
             this.txtTempoh.ForeColor = System.Drawing.Color.Black;
             this.txtTempoh.Location = new System.Drawing.Point(196, 239);
             this.txtTempoh.Margin = new System.Windows.Forms.Padding(4);
             this.txtTempoh.Name = "txtTempoh";
-            this.txtTempoh.Size = new System.Drawing.Size(917, 39);
+            this.txtTempoh.Size = new System.Drawing.Size(917, 33);
             this.txtTempoh.TabIndex = 18;
             // 
             // txtKejayaan
             // 
             this.txtKejayaan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtKejayaan.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKejayaan.Font = new System.Drawing.Font("Cambria", 13.2F);
             this.txtKejayaan.Location = new System.Drawing.Point(195, 285);
             this.txtKejayaan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKejayaan.Multiline = true;

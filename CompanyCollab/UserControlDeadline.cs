@@ -87,33 +87,13 @@ namespace CompanyCollab
                 }
 
                 dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Ascending);
-                
-                
-                
-
+             
             }
             else
             {
                 MessageBox.Show("Check Internet Connection");
 
             }
-            
-           /* foreach (DataGridViewRow row in dataGridView1.Rows)
-                switch ((row.Cells[0].ToString()))
-                {
-                    case > DateTime.Today:
-                        row.DefaultCellStyle.BackColor = Color.Green;
-                        break;
-                    case == DateTime.Today:
-                        row.DefaultCellStyle.BackColor = Color.Yellow;
-                        break;
-                    case < DateTime.Today:
-                        row.DefaultCellStyle.BackColor = Color.Red;
-                        break;
-                }
-           */
-
-          
             
         }
 
